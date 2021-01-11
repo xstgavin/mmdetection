@@ -24,7 +24,7 @@ class TwoStageDetector(BaseDetector):
                  pretrained=None):
         super(TwoStageDetector, self).__init__()
         self.backbone = build_backbone(backbone)
-
+        print("two_stage.py: pretrained= ",pretrained)
         if neck is not None:
             self.neck = build_neck(neck)
 
