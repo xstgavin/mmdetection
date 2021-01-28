@@ -45,7 +45,7 @@ data = dict(
     train=dict(
         type=dataset_type,
         filter_empty_gt = False,
-        ann_file=data_root + 'train/random12_pornpic2k_hm3k_abby_javporn_jointRot_bgrd.json',
+        ann_file=data_root + 'train/random12_pornpic2k_hm3k_abby_javporn_fc2photo_jointRot_bgrd.json',
         #ann_file=data_root + 'train/random12_pornpic2k_hm3k_abby_javporn_flt.json',
        img_prefix=data_root + 'train/',
         pipeline=train_pipeline),
@@ -91,6 +91,8 @@ lr_config = dict(
 total_epochs = 40
 fp16 = dict(loss_scale=512.)
 #load_from='./pretrained/lvis/mask_rcnn_x101_32x4d_fpn_sample1e-3_mstrain_1x_lvis_v1-ebbc5c81.pth'
-load_from='./pretrained/censor/x101_32x4d_wnRot_wBgrd-epoch27.pth'
+#load_from='./pretrained/censor/x101_32x4d_wnRot_wBgrd-epoch27.pth'
+#load_from='./pretrained/censor/x101_32x4d_wnRot_wBgrd-epoch27.pth'
+load_from='./pretrained/censor/faster_rcnn_x101_32x4d_fpn_1x_rotdat-epoch10.pth'
 log_config = dict(interval=200)
 evaluation = dict(start=0)
