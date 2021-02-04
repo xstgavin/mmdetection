@@ -87,8 +87,8 @@ lr_config = dict(
     warmup='linear',
     warmup_iters=500,
     warmup_ratio=0.001,
-    step=[8, 20, 32])
-total_epochs = 40
+    step=[16, 32, 48])
+total_epochs = 54
 fp16 = dict(loss_scale=512.)
 load_from='./pretrained/lvis/mask_rcnn_x101_32x4d_fpn_sample1e-3_mstrain_1x_lvis_v1-ebbc5c81.pth'
 #load_from='./pretrained/censor/x101_32x4d_wnRot_wBgrd-epoch27.pth'

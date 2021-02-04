@@ -29,6 +29,7 @@ tar -xf val.tar && rm val.tar
 tar -xf train.tar && rm train.tar 
 tar -xf annotations_add.tar  && rm annotations_add.tar
 cp annotations_add/random12_pornpic2k_hm3k_abby_javporn_fc2photo_jointRot_bgrd.json ./train/
+cp annotations_add/random12_pornpic2k_hm3k_abby_javporn_fc2pv_jointRot_bgrd.json ./train/
 cp annotations_add/val_jointRot_bgrd.json ./val/
 
 

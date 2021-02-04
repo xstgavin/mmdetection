@@ -10,12 +10,12 @@ train_pipeline = [
     dict(type='LoadImageFromFile', to_float32=True),
     dict(type='LoadAnnotations', with_bbox=True),
     dict(type='Resize', img_scale=(1333, 800), keep_ratio=True),
-#     dict(
-#         type='PhotoMetricDistortion',
-#         brightness_delta=32,
-#         contrast_range=(0.5, 1.5),
-#         saturation_range=(0.5, 1.5),
-#         hue_delta=18),
+     dict(
+         type='PhotoMetricDistortion',
+         brightness_delta=16,
+         contrast_range=(0.8, 1.2),
+         saturation_range=(0.8, 1.2),
+         hue_delta=9),
     dict(type='RandomFlip', flip_ratio=0.5,direction='horizontal'),
     dict(type='RandomFlip', flip_ratio=0.5,direction='vertical'),
     dict(type='Normalize', **img_norm_cfg),
@@ -87,8 +87,8 @@ lr_config = dict(
     warmup='linear',
     warmup_iters=500,
     warmup_ratio=0.001,
-    step=[8, 20, 32])
-total_epochs = 40
+    step=[12, 24, 36])
+total_epochs = 42
 fp16 = dict(loss_scale=512.)
 load_from='./pretrained/lvis/mask_rcnn_x101_32x4d_fpn_sample1e-3_mstrain_1x_lvis_v1-ebbc5c81.pth'
 #load_from='./pretrained/censor/x101_32x4d_wnRot_wBgrd-epoch27.pth'
