@@ -66,7 +66,8 @@ def main():
     parser.add_argument(
         '--pt', type=int, default=0, help='current thread index')
     parser.add_argument(
-        '--category', default='porn', help='class category to test')    
+        '--category', default='porn', help='class category to test')   
+    
     args = parser.parse_args()
     print(args.groups, args.pt)
     # build the model from a config file and a checkpoint file

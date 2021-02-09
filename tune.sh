@@ -13,6 +13,7 @@ export PORT=25001
 
 #./tools/dist_train.sh ./configs/censor/faster_rcnn_x101_32x4d_fpn_1x_fc2p_rotdat.py 4
 #./tools/dist_train.sh ./configs/censor/faster_rcnn_x101_32x4d_fpn_1x_fc2p_rotdat_clraug.py 4
-./tools/dist_train.sh ./configs/censor/faster_rcnn_x101_32x4d_fpn_1x_fc2pv_rotdat-v2.py 4
-
+#./tools/dist_train.sh ./configs/censor/faster_rcnn_x101_32x4d_fpn_1x_fc2pv_rotdat-v2.py 4
+#./tools/dist_train.sh ./configs/censor/faster_rcnn_x101_32x4d_fpn_1x_fc2pv_rotdat-clr-v2.py 4
+./tools/dist_train.sh ./configs/censor/faster_rcnn_x101_64x4d_fpn_1x_fc2pv_rotdat-clr-v2.py 4
 #./tools/dist_train.sh ./configs/censor/faster_rcnn_x101_64x4d_fpn_1x_censor.py 4
